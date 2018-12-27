@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.ddlab.tornado.gitpusher.id</id>
+    <name>DDLAB Gitpusher</name>
+    <version>1.0</version>
+    <vendor email="deba.java@gmail.com" url="http://www.yourcompany.com">DDLAB INC</vendor>
+
+    <description>This plugin helps in pushing code directly to GitHu or Bitbucket</description>
+
+    <change-notes>This is the initial version.This plugin helps in pushing code directly to GitHu or Bitbucket</change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+
+    </extensions>
+
+    <actions>
+        <action id="pushToGitId" class="com.ddlab.tornado.actions.GitPushAction">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+
+        <action id="createGistSnippetId" class="com.ddlab.tornado.actions.GistSnippetAction" text="Create Git Snippet"
+                description="Create a Snippet">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

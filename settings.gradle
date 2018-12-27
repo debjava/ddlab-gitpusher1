@@ -1,0 +1,4 @@
+rootProject.name = 'ddlab-gitpusher1'
+include 'ddlab.generator'
+include 'ddlab.gitpusher.core'
+
